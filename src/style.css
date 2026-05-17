@@ -14,10 +14,10 @@
   --subtext-dark: #8c8c8c;
   --subtext-light: #5a5a5a;
   
-  --accent: #ff4d00;
-  --accent-rgb: 255, 77, 0;
-  --accent-gradient: linear-gradient(135deg, #ff4d00, #ff8000);
-  --spotlight-glow: rgba(255, 77, 0, 0.18);
+  --accent: #e60000;
+  --accent-rgb: 230, 0, 0;
+  --accent-gradient: linear-gradient(135deg, #ff1a1a, #cc0000);
+  --spotlight-glow: rgba(230, 0, 0, 0.18);
   
   /* Dynamic Theme Variables */
   --theme-bg: var(--bg-dark);
@@ -375,8 +375,8 @@ body.light-theme .header-pill {
   color: var(--theme-text);
 }
 
-.logo-gold {
-  color: #caa025; /* Mustard-gold color matching the user logo exactly */
+.logo-red {
+  color: var(--accent);
   transition: var(--transition-smooth);
 }
 
