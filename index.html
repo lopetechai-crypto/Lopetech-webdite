@@ -27,52 +27,44 @@
     <div id="preloader" class="preloader">
       <div class="preloader-content">
         <div class="preloader-shapes">
-          <!-- Pyramid -->
-          <svg viewBox="0 0 100 100" class="preloader-shape">
-            <defs>
-              <linearGradient id="pyrLeft" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#ffffff"/>
-                <stop offset="100%" stop-color="#999999"/>
-              </linearGradient>
-              <linearGradient id="pyrRight" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#cccccc"/>
-                <stop offset="100%" stop-color="#333333"/>
-              </linearGradient>
-            </defs>
-            <polygon points="50,15 15,85 50,95" fill="url(#pyrLeft)"/>
-            <polygon points="50,15 85,85 50,95" fill="url(#pyrRight)"/>
-          </svg>
-          <!-- Sphere -->
-          <svg viewBox="0 0 100 100" class="preloader-shape">
-            <defs>
-              <radialGradient id="sphereGrad" cx="35%" cy="30%" r="70%">
-                <stop offset="0%" stop-color="#ff6666"/>
-                <stop offset="30%" stop-color="#e60000"/>
-                <stop offset="100%" stop-color="#4d0000"/>
-              </radialGradient>
-            </defs>
-            <circle cx="50" cy="50" r="40" fill="url(#sphereGrad)"/>
-          </svg>
-          <!-- Cube -->
-          <svg viewBox="0 0 100 100" class="preloader-shape">
-            <defs>
-              <linearGradient id="cubeTop" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#ff4d4d"/>
-                <stop offset="100%" stop-color="#e60000"/>
-              </linearGradient>
-              <linearGradient id="cubeLeft" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#b30000"/>
-                <stop offset="100%" stop-color="#660000"/>
-              </linearGradient>
-              <linearGradient id="cubeRight" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#800000"/>
-                <stop offset="100%" stop-color="#330000"/>
-              </linearGradient>
-            </defs>
-            <polygon points="50,20 85,38 50,56 15,38" fill="url(#cubeTop)"/>
-            <polygon points="15,38 50,56 50,90 15,72" fill="url(#cubeLeft)"/>
-            <polygon points="50,56 85,38 85,72 50,90" fill="url(#cubeRight)"/>
-          </svg>
+          <div class="preloader-shape-wrapper">
+            <div class="preloader-shadow" style="animation-delay: 0s;"></div>
+            <svg viewBox="0 0 100 100" class="preloader-shape" style="animation-delay: 0s;" overflow="visible">
+              <g transform="rotate(-10 50 50)">
+                <path d="M 50 15 L 85 85 Q 85 95 75 95 L 25 95 Q 15 95 15 85 Z" fill="#eb5a46"/>
+                <circle cx="40" cy="55" r="9" fill="white"/>
+                <circle cx="43" cy="57" r="4" fill="#222"/>
+                <circle cx="65" cy="50" r="9" fill="white"/>
+                <circle cx="68" cy="52" r="4" fill="#222"/>
+                <circle cx="55" cy="75" r="7" fill="#222"/>
+              </g>
+            </svg>
+          </div>
+          <div class="preloader-shape-wrapper">
+            <div class="preloader-shadow" style="animation-delay: 0.15s;"></div>
+            <svg viewBox="0 0 100 100" class="preloader-shape" style="animation-delay: 0.15s;" overflow="visible">
+              <g transform="rotate(10 50 50)">
+                <rect x="15" y="15" width="70" height="70" rx="18" fill="#eb5a46"/>
+                <circle cx="35" cy="40" r="9" fill="white"/>
+                <circle cx="32" cy="40" r="4" fill="#222"/>
+                <circle cx="60" cy="35" r="9" fill="white"/>
+                <circle cx="57" cy="35" r="4" fill="#222"/>
+                <path d="M 35 55 Q 50 80 65 55 Q 50 65 35 55 Z" fill="#222"/>
+                <path d="M 45 62 Q 50 72 55 62 Z" fill="#ff4d4d"/>
+              </g>
+            </svg>
+          </div>
+          <div class="preloader-shape-wrapper">
+            <div class="preloader-shadow" style="animation-delay: 0.3s;"></div>
+            <svg viewBox="0 0 100 100" class="preloader-shape" style="animation-delay: 0.3s;" overflow="visible">
+              <circle cx="50" cy="50" r="38" fill="#eb5a46"/>
+              <circle cx="35" cy="45" r="8" fill="white"/>
+              <circle cx="33" cy="46" r="3.5" fill="#222"/>
+              <circle cx="65" cy="45" r="8" fill="white"/>
+              <circle cx="63" cy="46" r="3.5" fill="#222"/>
+              <ellipse cx="50" cy="65" rx="6" ry="3" fill="#222"/>
+            </svg>
+          </div>
         </div>
         <div class="preloader-line-container">
           <div class="preloader-line"></div>
