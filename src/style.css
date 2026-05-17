@@ -2520,10 +2520,12 @@ html, body {
   }
 
   .project-img-wrapper {
-    height: 220px !important;
+    height: auto !important;
   }
 
   .project-image {
+    height: auto !important;
+    aspect-ratio: 16 / 10 !important;
     border-radius: 0 0 16px 16px !important;
   }
 
