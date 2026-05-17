@@ -339,4 +339,59 @@ document.addEventListener('DOMContentLoaded', () => {
     heroTitle.innerHTML = wrappedHTML;
   }
 
+  // --- 12. GLOSSY CURSOR FOLLOWER (Desktop Only) ---
+  if (!isTouchDevice) {
+    const cursorFollower = document.querySelector('.cursor-follower');
+    if (cursorFollower) {
+      let mouseX = window.innerWidth / 2;
+      let mouseY = window.innerHeight / 2;
+      let cursorX = mouseX;
+      let cursorY = mouseY;
+      let isMoving = false;
+      let isHovering = false;
+
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!isMoving) {
+          isMoving = true;
+          cursorFollower.style.opacity = '1';
+        }
+      });
+
+      // Interactive hover states
+      const hoverables = document.querySelectorAll('a, button, .pill-btn, .project-card, .faq-header');
+      hoverables.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          isHovering = true;
+          cursorFollower.style.background = 'rgba(255, 255, 255, 0.15)';
+          cursorFollower.style.borderColor = 'rgba(255, 255, 255, 0.4)';
+          cursorFollower.style.boxShadow = '0 0 30px rgba(255, 255, 255, 0.2), inset 0 4px 6px rgba(255, 255, 255, 0.4)';
+        });
+        el.addEventListener('mouseleave', () => {
+          isHovering = false;
+          cursorFollower.style.background = 'rgba(255, 77, 0, 0.25)';
+          cursorFollower.style.borderColor = 'rgba(255, 255, 255, 0.25)';
+          cursorFollower.style.boxShadow = '0 0 20px rgba(255, 77, 0, 0.2), inset 0 4px 6px rgba(255, 255, 255, 0.3)';
+        });
+      });
+
+      const animateCursor = () => {
+        // Linear interpolation for smooth trailing
+        const dx = mouseX - cursorX;
+        const dy = mouseY - cursorY;
+        
+        cursorX += dx * 0.15;
+        cursorY += dy * 0.15;
+        
+        const scale = isHovering ? 'scale(1.8)' : 'scale(1)';
+        cursorFollower.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) ${scale}`;
+        
+        requestAnimationFrame(animateCursor);
+      };
+      
+      animateCursor();
+    }
+  }
+
 });
