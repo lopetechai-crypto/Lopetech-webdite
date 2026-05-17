@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lope Tech | Enterprise AI Solutions & Intelligent Products</title>
+    <meta name="description" content="Lope Tech is a premier AI engineering company building scalable AI products, autonomous agents, and bespoke artificial intelligence solutions for forward-thinking enterprises and investors." />
+    <meta name="author" content="Lope Tech" />
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Lope Tech | Enterprise AI Solutions & Products" />
+    <meta property="og:description" content="Architecting the future of Enterprise AI — custom agents, LLM systems, predictive analytics, and proprietary AI products." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/Lopetech-webdite/founder_portrait.png" />
+    
+    <!-- Lucide Icons for clean SVGs -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" crossorigin src="/Lopetech-webdite/assets/index-D9vR_Qhm.js"></script>
+    <link rel="stylesheet" crossorigin href="/Lopetech-webdite/assets/index-CMVDSmQO.css">
+  </head>
+  <body>
+    <!-- Film Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Custom Preloader -->
+    <div id="preloader" class="preloader">
+      <div class="preloader-content">
+        <div class="preloader-logo">
+          <svg viewBox="20 10 60 80" class="logo-icon-svg" style="width: 28px; height: 36px;">
+            <polygon points="32.5,21.25 45,27.5 45,77.5 32.5,71.25" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+            <polygon points="57.5,58.75 45,52.5 45,77.5 57.5,83.75" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+            <polygon points="57.5,21.25 45,27.5 45,52.5 57.5,46.25" fill="#e2e2e2" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+            <polygon points="70,52.5 57.5,58.75 57.5,71.25 70,65" fill="#e2e2e2" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+            <polygon points="32.5,21.25 45,15 57.5,21.25 45,27.5" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+            <polygon points="45,52.5 57.5,46.25 70,52.5 57.5,58.75" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+          </svg>
+          <span class="logo-text">Lope <span class="logo-gold">Tech</span></span>
+        </div>
+        <div class="preloader-line-container">
+          <div class="preloader-line"></div>
+        </div>
+        <div id="preloader-percentage" class="preloader-percentage">0%</div>
+      </div>
+    </div>
+
+    <!-- Floating Navigation Header Pill -->
+    <header class="header-pill">
+      <a href="#" class="logo-link">
+        <svg viewBox="20 10 60 80" class="logo-icon-svg" style="width: 20px; height: 26px;">
+          <polygon points="32.5,21.25 45,27.5 45,77.5 32.5,71.25" fill="currentColor" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+          <polygon points="57.5,58.75 45,52.5 45,77.5 57.5,83.75" fill="currentColor" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+          <polygon points="57.5,21.25 45,27.5 45,52.5 57.5,46.25" fill="currentColor" opacity="0.85" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+          <polygon points="70,52.5 57.5,58.75 57.5,71.25 70,65" fill="currentColor" opacity="0.85" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+          <polygon points="32.5,21.25 45,15 57.5,21.25 45,27.5" fill="currentColor" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+          <polygon points="45,52.5 57.5,46.25 70,52.5 57.5,58.75" fill="currentColor" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+        </svg>
+        <span class="logo-text">Lope <span class="logo-gold">Tech</span></span>
+      </a>
+      <button class="hamburger-btn" aria-label="Toggle Menu" id="menu-toggle">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </header>
+
+    <!-- Fullscreen Glassmorphic Menu Overlay -->
+    <div class="menu-overlay" id="menu-overlay">
+      <button class="menu-close-btn" id="menu-close" aria-label="Close Menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <nav class="menu-nav">
+        <a href="#hero" class="menu-link">Home</a>
+        <a href="#services" class="menu-link">Services</a>
+        <a href="#work" class="menu-link">Work</a>
+        <a href="#about" class="menu-link">About</a>
+        <a href="#founder" class="menu-link">Team</a>
+        <a href="#leadership" class="menu-link">Founder</a>
+        <a href="#contact" class="menu-link">Connect</a>
+      </nav>
+      <div class="menu-contact">
+        <a href="mailto:lopetechai@gmail.com" class="menu-email">
+          <span class="email-circle">+</span> lopetechai@gmail.com
+        </a>
+      </div>
+      <div class="menu-footer">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <p class="menu-copyright">© 2026 Lope Tech</p>
+      </div>
+    </div>
+
+    <main>
+      <!-- SECTION 1: HERO (Dark Theme - Full Screen Edge to Edge) -->
+      <section id="hero" class="section hero-section dark-bg active-section scroll-trigger" data-theme="dark">
+        <div class="hero-glow-layer">
+          <div class="hero-radial-glow"></div>
+        </div>
+        
+        <!-- Centerpiece Brand Typography Centerpiece (No Image) -->
+        <div class="hero-centerpiece-container">
+          <h1 class="hero-main-title condensed-font">LOPE <span class="text-accent">TECH</span></h1>
+          <div class="hero-cursive-overlay handwriting-font">
+            Architecting the future of Enterprise AI
+          </div>
+        </div>
+
+        <!-- Balanced Bottom Row: Slogan on Left, Direct Email on Right -->
+        <div class="hero-bottom-grid">
+          <div class="hero-bottom-desc">
+            <p class="hero-desc-paragraph text-muted-light">We are a premier AI engineering firm building scalable, proprietary AI products and delivering bespoke artificial intelligence solutions for forward-thinking enterprises.</p>
+          </div>
+          
+          <div class="hero-bottom-contact">
+            <p class="hero-card-role">Direct Contact</p>
+            <h3 class="hero-card-name" style="font-size: 1.1rem; color: #fff; margin: 4px 0 12px; font-weight: 700;">lopetechai@gmail.com</h3>
+            <a href="mailto:lopetechai@gmail.com" class="pill-btn light-btn hero-cta-btn" style="padding: 8px 16px; font-size: 0.8rem;">
+              <span>Let's talk</span>
+              <span class="btn-dot bg-accent"></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-scroll-indicator">
+          <p>Scroll to explore</p>
+          <div class="scroll-arrow-down"></div>
+        </div>
+      </section>
+
+
+      <!-- SECTION 3: WORK PORTFOLIO (Light Theme) -->
+      <section id="work" class="section work-section light-bg scroll-trigger" data-theme="light">
+        <div class="section-container">
+          <div class="work-header-grid">
+            <div class="work-title-wrap reveal-on-scroll stagger-1">
+              <h2 class="huge-section-title text-dark condensed-font">Case Studies.</h2>
+              <span class="work-year-tag text-accent font-bold">©2026</span>
+            </div>
+            <div class="work-desc-wrap reveal-on-scroll stagger-2">
+              <p class="large-desc text-muted-dark">Real-world AI implementations showcasing how we deploy intelligent systems, predictive models, and autonomous agents that drive measurable business outcomes.</p>
+            </div>
+          </div>
+
+          <!-- Masonry Grid for Projects -->
+          <div class="work-masonry-grid">
+            <!-- Project 1: Shoe Pit -->
+            <div class="project-card">
+              <div class="project-card-header">
+                <div class="project-info">
+                  <span class="project-num">(01)</span>
+                  <h3 class="project-title text-dark">RetailSense AI</h3>
+                  <span class="project-sep">/</span>
+                  <span class="project-category">AI-Powered E-commerce</span>
+                </div>
+                <button class="project-options-btn" aria-label="Project details">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="1"></circle>
+                    <circle cx="19" cy="12" r="1"></circle>
+                    <circle cx="5" cy="12" r="1"></circle>
+                  </svg>
+                </button>
+              </div>
+              <div class="project-img-wrapper">
+                <img src="/Lopetech-webdite/shoe_pit.png" alt="RetailSense AI — Predictive Demand Forecasting & Smart Recommendations" class="project-image" />
+                <div class="project-img-overlay">
+                  <span class="pill-btn light-btn">View Case Study</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 2: Amakh Website -->
+            <div class="project-card">
+              <div class="project-card-header">
+                <div class="project-info">
+                  <span class="project-num">(02)</span>
+                  <h3 class="project-title text-dark">EduMind AI</h3>
+                  <span class="project-sep">/</span>
+                  <span class="project-category">AI Learning Platform</span>
+                </div>
+                <button class="project-options-btn" aria-label="Project details">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="1"></circle>
+                    <circle cx="19" cy="12" r="1"></circle>
+                    <circle cx="5" cy="12" r="1"></circle>
+                  </svg>
+                </button>
+              </div>
+              <div class="project-img-wrapper">
+                <img src="/Lopetech-webdite/amakh_mockup.png" alt="EduMind AI — Intelligent Student Assessment & Adaptive Learning Engine" class="project-image" />
+                <div class="project-img-overlay">
+                  <span class="pill-btn light-btn">View Case Study</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Projects -->
+          <div class="upcoming-work-header reveal-on-scroll stagger-1">
+            <h3 class="text-dark font-bold text-xl mb-6 uppercase tracking-wider" style="letter-spacing: 0.1em; color: rgba(0,0,0,0.5);">Upcoming Glimpses</h3>
+            <div class="upcoming-glimpse-card" title="JurisAI - Intelligent Legal Copilot">
+              <div class="glimpse-abstract-ui"></div>
+              <div class="glimpse-grid-overlay"></div>
+              <div class="glimpse-glass-panel">
+                <span class="glimpse-tag">Coming Soon</span>
+                <h3 class="glimpse-title">JurisAI</h3>
+                <p class="glimpse-subtitle">Intelligent Legal Copilot. Smart legal assistance. Simplified decisions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: DESIGN OVERVIEW (Dark Theme Transition) -->
+      <section id="overview" class="section overview-section dark-bg scroll-trigger" data-theme="dark">
+        <div class="hero-glow-layer">
+          <div class="overview-radial-glow"></div>
+        </div>
+        <div class="section-container">
+          <div class="overview-grid-layout">
+            <div class="overview-heading-col reveal-on-scroll stagger-1">
+              <span class="small-tag text-accent font-bold">✦ CORE CAPABILITIES</span>
+              <h2 class="huge-section-title text-white condensed-font">AI Infrastructure.</h2>
+              <p class="large-desc text-muted-light mt-4">Enterprise-grade AI systems engineered for precision, speed, and scale. From LLM orchestration to real-time inference pipelines, our infrastructure powers mission-critical applications across industries.</p>
+            </div>
+            
+            <div class="overview-grid-stack reveal-on-scroll stagger-2">
+              <div class="overview-stack-card card-rotate-left">
+                <div class="card-header-dots">
+                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="card-ui-preview">
+                  <div class="preview-text-line heavy">99.9% UPTIME</div>
+                  <div class="preview-text-line sub">LLM ORCHESTRATION</div>
+                  <div class="preview-graph">
+                    <div class="graph-bar" style="height: 60%"></div>
+                    <div class="graph-bar" style="height: 85%"></div>
+                    <div class="graph-bar active" style="height: 100%"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="overview-stack-card card-rotate-right">
+                <div class="card-header-dots">
+                  <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </div>
+                <div class="card-ui-preview font-center">
+                  <div class="preview-large-badge">3B+</div>
+                  <div class="preview-badge-sub">TOKENS PROCESSED</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: SERVICES (Dark Theme grainy box) -->
+      <section id="services" class="section services-section dark-bg scroll-trigger" data-theme="dark">
+        <div class="services-grainy-container">
+          <div class="section-container">
+            <span class="small-tag text-accent font-bold mb-4 block">✦ AI SOLUTIONS</span>
+            <h2 class="huge-section-title text-white condensed-font mb-12">Services.<span class="text-accent">(4)</span></h2>
+
+            <!-- Services Accordion -->
+            <div class="services-accordion-list reveal-on-scroll stagger-2">
+              <!-- Item 1: AI & Custom Agents (Expanded by default) -->
+              <div class="accordion-item active" data-index="1">
+                <div class="accordion-header">
+                  <span class="accordion-num">(001)</span>
+                  <h3 class="accordion-title">Autonomous AI Agents</h3>
+                  <button class="accordion-toggle-btn" aria-label="Toggle accordion">
+                    <span class="toggle-icon-line"></span>
+                    <span class="toggle-icon-line"></span>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content-inner">
+                    <div class="accordion-media-box">
+                      <div class="media-corner-fold">AI</div>
+                      <img src="/Lopetech-webdite/ai_agents_mockup.png" alt="AI Development & Custom Agents Showcase" class="accordion-thumb-img" />
+                    </div>
+                    <div class="accordion-text-box">
+                      <h4 class="accordion-inner-title text-accent">Autonomous AI Agents</h4>
+                      <p class="accordion-desc">Custom-built autonomous agents that automate complex business workflows, handle multi-step decision-making, and integrate seamlessly into enterprise systems. From customer support copilots to internal operations orchestrators.</p>
+                      
+                      <div class="accordion-categories-wrap">
+                        <span class="accordion-pill-category">LLMs</span>
+                        <span class="accordion-pill-category">Custom Agents</span>
+                        <span class="accordion-pill-category">RAG Systems</span>
+                        <span class="accordion-pill-category">LangChain</span>
+                        <span class="accordion-pill-category">CrewAI</span>
+                        <span class="accordion-pill-category">Vector DBs</span>
+                        <span class="accordion-pill-category">Multi-Agent</span>
+                        <span class="accordion-pill-count">8+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 2: Web Development -->
+              <div class="accordion-item" data-index="2">
+                <div class="accordion-header">
+                  <span class="accordion-num">(002)</span>
+                  <h3 class="accordion-title">LLM Fine-Tuning & RAG</h3>
+                  <button class="accordion-toggle-btn" aria-label="Toggle accordion">
+                    <span class="toggle-icon-line"></span>
+                    <span class="toggle-icon-line"></span>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content-inner">
+                    <div class="accordion-media-box">
+                      <div class="media-corner-fold">W</div>
+                      <img src="/Lopetech-webdite/web_dev_service.png" alt="Web Development Showcase" class="accordion-thumb-img" />
+                    </div>
+                    <div class="accordion-text-box">
+                      <h4 class="accordion-inner-title text-accent">LLM Fine-Tuning & RAG</h4>
+                      <p class="accordion-desc">Domain-specific language model customization and retrieval-augmented generation systems that connect AI to your proprietary datasets, ensuring accurate, context-aware responses for your industry.</p>
+                      
+                      <div class="accordion-categories-wrap">
+                        <span class="accordion-pill-category">GPT-4</span>
+                        <span class="accordion-pill-category">Claude</span>
+                        <span class="accordion-pill-category">Gemini</span>
+                        <span class="accordion-pill-category">Fine-Tuning</span>
+                        <span class="accordion-pill-category">Embeddings</span>
+                        <span class="accordion-pill-category">Pinecone</span>
+                        <span class="accordion-pill-count">10+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: App Development -->
+              <div class="accordion-item" data-index="3">
+                <div class="accordion-header">
+                  <span class="accordion-num">(003)</span>
+                  <h3 class="accordion-title">Predictive Analytics & Vision</h3>
+                  <button class="accordion-toggle-btn" aria-label="Toggle accordion">
+                    <span class="toggle-icon-line"></span>
+                    <span class="toggle-icon-line"></span>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content-inner">
+                    <div class="accordion-media-box">
+                      <div class="media-corner-fold">M</div>
+                      <img src="/Lopetech-webdite/app_dev_service.png" alt="App Development Showcase" class="accordion-thumb-img" />
+                    </div>
+                    <div class="accordion-text-box">
+                      <h4 class="accordion-inner-title text-accent">Predictive Analytics & Vision</h4>
+                      <p class="accordion-desc">Machine learning models for demand forecasting, anomaly detection, risk assessment, and computer vision systems powering real-time image recognition, quality inspection, and spatial analysis.</p>
+                      
+                      <div class="accordion-categories-wrap">
+                        <span class="accordion-pill-category">ML Models</span>
+                        <span class="accordion-pill-category">Computer Vision</span>
+                        <span class="accordion-pill-category">TensorFlow</span>
+                        <span class="accordion-pill-category">PyTorch</span>
+                        <span class="accordion-pill-category">Time Series</span>
+                        <span class="accordion-pill-category">NLP</span>
+                        <span class="accordion-pill-count">6+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 4: Custom Software -->
+              <div class="accordion-item" data-index="4">
+                <div class="accordion-header">
+                  <span class="accordion-num">(004)</span>
+                  <h3 class="accordion-title">AI Product Development</h3>
+                  <button class="accordion-toggle-btn" aria-label="Toggle accordion">
+                    <span class="toggle-icon-line"></span>
+                    <span class="toggle-icon-line"></span>
+                  </button>
+                </div>
+                <div class="accordion-content">
+                  <div class="accordion-content-inner">
+                    <div class="accordion-media-box">
+                      <div class="media-corner-fold">S</div>
+                      <img src="/Lopetech-webdite/custom_software_service.png" alt="Custom Software Showcase" class="accordion-thumb-img" />
+                    </div>
+                    <div class="accordion-text-box">
+                      <h4 class="accordion-inner-title text-accent">AI Product Development</h4>
+                      <p class="accordion-desc">End-to-end AI SaaS product engineering — from ideation and data architecture to model training, deployment, and continuous optimization. We build investor-ready AI products that scale.</p>
+                      
+                      <div class="accordion-categories-wrap">
+                        <span class="accordion-pill-category">SaaS</span>
+                        <span class="accordion-pill-category">MLOps</span>
+                        <span class="accordion-pill-category">Cloud GPUs</span>
+                        <span class="accordion-pill-category">CI/CD</span>
+                        <span class="accordion-pill-category">API Design</span>
+                        <span class="accordion-pill-count">5+</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Get Started CTA Button -->
+            <div class="services-footer-cta">
+              <a href="#contact" class="pill-btn light-btn services-cta-btn">Get started</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 6: ABOUT & APPROACH (Light Theme Transition) -->
+      <section id="about" class="section about-section light-bg scroll-trigger" data-theme="light">
+        <div class="section-container">
+          <div class="about-grid-layout">
+            <div class="about-tag-sidebar">
+              <button class="about-sidebar-btn font-bold">
+                <span class="sidebar-btn-plus">+</span> About us
+              </button>
+            </div>
+            <div class="about-content-body">
+              <div class="about-header-row reveal-on-scroll stagger-1">
+                <span class="logo-badge-mini">Lope Tech</span>
+                <h2 class="huge-section-title text-dark">Our AI Transformation <span class="text-muted-dark">Framework</span> — from data to deployment.</h2>
+                <p class="large-desc text-muted-dark mt-6">We partner with enterprises to build production-ready AI systems. Our proven framework takes you from raw data to deployed, scalable intelligence — on time and on budget.</p>
+              </div>
+
+              <!-- Approach 2x2 Grid -->
+              <div class="about-approach-grid">
+                <!-- Card 1 -->
+                <div class="approach-card">
+                  <div class="approach-card-header">
+                    <div class="approach-dot-indicator">
+                      <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+                    </div>
+                    <span class="approach-num">01</span>
+                  </div>
+                  <div class="approach-card-body">
+                    <div class="approach-icon-box">
+                      <i data-lucide="eye" class="approach-icon"></i>
+                    </div>
+                    <h3 class="approach-card-title text-dark">Audit data & define AI objectives</h3>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="approach-card">
+                  <div class="approach-card-header">
+                    <div class="approach-dot-indicator">
+                      <span class="dot"></span><span class="dot active"></span><span class="dot"></span>
+                    </div>
+                    <span class="approach-num">02</span>
+                  </div>
+                  <div class="approach-card-body">
+                    <div class="approach-icon-box">
+                      <i data-lucide="users" class="approach-icon"></i>
+                    </div>
+                    <h3 class="approach-card-title text-dark">Train & validate custom models</h3>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="approach-card">
+                  <div class="approach-card-header">
+                    <div class="approach-dot-indicator">
+                      <span class="dot active"></span><span class="dot"></span>
+                    </div>
+                    <span class="approach-num">03</span>
+                  </div>
+                  <div class="approach-card-body">
+                    <div class="approach-icon-box">
+                      <i data-lucide="git-branch" class="approach-icon"></i>
+                    </div>
+                    <h3 class="approach-card-title text-dark">Deploy to production with CI/CD</h3>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="approach-card">
+                  <div class="approach-card-header">
+                    <div class="approach-dot-indicator">
+                      <span class="dot active"></span><span class="dot"></span>
+                    </div>
+                    <span class="approach-num">04</span>
+                  </div>
+                  <div class="approach-card-body">
+                    <div class="approach-icon-box">
+                      <i data-lucide="shield-check" class="approach-icon"></i>
+                    </div>
+                    <h3 class="approach-card-title text-dark">Monitor, optimize & scale continuously</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 7: SPECIALIST NETWORK / LEADERSHIP (Dark Theme) -->
+      <section id="founder" class="section founder-section dark-bg scroll-trigger" data-theme="dark">
+        <div class="section-container">
+          <div class="founder-grid-layout">
+            <div class="founder-left-col">
+              <div class="founder-big-logo">
+                <svg viewBox="20 10 60 80" class="logo-icon-svg" style="width: 44px; height: 58px;">
+                  <polygon points="32.5,21.25 45,27.5 45,77.5 32.5,71.25" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="57.5,58.75 45,52.5 45,77.5 57.5,83.75" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="57.5,21.25 45,27.5 45,52.5 57.5,46.25" fill="#e2e2e2" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="70,52.5 57.5,58.75 57.5,71.25 70,65" fill="#e2e2e2" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="32.5,21.25 45,15 57.5,21.25 45,27.5" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="45,52.5 57.5,46.25 70,52.5 57.5,58.75" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                <span class="logo-text">Lope <span class="logo-gold">Tech</span></span>
+              </div>
+              
+              <p class="founder-italic-desc text-white mt-12 font-light italic">"We assemble elite AI engineers, data scientists, and ML researchers precisely when your project demands it — ensuring world-class expertise at every stage of the AI lifecycle."</p>
+              
+              <div class="founder-cta-wrap mt-8">
+                <a href="#contact" class="pill-btn light-btn founder-apply-btn">
+                  <span>Start a Project</span>
+                  <span class="btn-dot bg-accent"></span>
+                </a>
+              </div>
+            </div>
+            <div class="founder-right-col">
+              <h2 class="founder-heading text-white font-light">Meet our <span class="text-accent font-bold">AI research & engineering</span> network.</h2>
+              <p class="large-desc text-muted-light mt-8">Lope Tech is a premier AI engineering company composed of machine learning researchers, data architects, and full-stack AI engineers with deep expertise in deploying production-grade intelligent systems. We build proprietary AI products and deliver bespoke solutions that transform how enterprises operate.</p>
+              <blockquote class="founder-quote text-white mt-8">
+                "Through Lope Tech, we are building the infrastructure for enterprise intelligence — scalable AI products that solve real-world problems and generate measurable ROI."
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8: STATS COUNTERS (Light Theme Transition) -->
+      <section id="stats" class="section stats-section light-bg scroll-trigger" data-theme="light">
+        <div class="section-container">
+          <div class="stats-counters-grid">
+            <div class="stat-counter-card">
+              <h3 class="stat-number text-dark" data-target="50">0</h3>
+              <p class="stat-label text-muted-dark">AI Models Deployed</p>
+            </div>
+            <div class="stat-counter-card">
+              <h3 class="stat-number text-dark" data-target="98">0</h3>
+              <p class="stat-label text-muted-dark">Client Retention %</p>
+            </div>
+            <div class="stat-counter-card">
+              <h3 class="stat-number text-dark" data-target="5">0</h3>
+              <p class="stat-label text-muted-dark">Years in AI</p>
+            </div>
+            <div class="stat-counter-card">
+              <h3 class="stat-number text-dark" data-target="24">0</h3>
+              <p class="stat-label text-muted-dark">AI Engineers</p>
+            </div>
+          </div>
+
+          <div class="stats-footer-row mt-20">
+            <div class="stats-logo-col">
+              <a href="#" class="logo-link">
+                <svg viewBox="20 10 60 80" class="logo-icon-svg" style="width: 20px; height: 26px;">
+                  <polygon points="32.5,21.25 45,27.5 45,77.5 32.5,71.25" fill="currentColor" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="57.5,58.75 45,52.5 45,77.5 57.5,83.75" fill="currentColor" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="57.5,21.25 45,27.5 45,52.5 57.5,46.25" fill="currentColor" opacity="0.85" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="70,52.5 57.5,58.75 57.5,71.25 70,65" fill="currentColor" opacity="0.85" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="32.5,21.25 45,15 57.5,21.25 45,27.5" fill="currentColor" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+                  <polygon points="45,52.5 57.5,46.25 70,52.5 57.5,58.75" fill="currentColor" stroke="var(--theme-card)" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+                <span class="logo-text">Lope <span class="logo-gold">Tech</span></span>
+              </a>
+            </div>
+            <div class="stats-text-col">
+              <p class="large-desc text-dark font-light">Our approach is precision-driven — we focus on model accuracy, inference speed, and production reliability. No unnecessary complexity, just high-impact AI engineering that delivers measurable business outcomes and competitive advantage.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 8.5: LEADERSHIP / FOUNDER (Dark Theme Card Stack) -->
+      <section id="leadership" class="section leadership-section dark-bg scroll-trigger" data-theme="dark" style="background-color: #0c0c0c !important;">
+        <div class="section-container" style="padding: 80px 0;">
+          <div class="leadership-grid">
+            <!-- Left Column: Name & Direct Contact -->
+            <div class="leadership-left">
+              <span class="leadership-tag text-accent font-bold">LEADERSHIP</span>
+              <h2 class="leadership-title text-white condensed-font mt-2">Meet Our Founder</h2>
+              
+              <div class="founder-identity-card mt-8">
+                <h3 class="founder-name text-white">Dr. Krishna Sekhar Vattikuti</h3>
+                <p class="founder-role text-accent font-bold mt-1">Founder & Visionary Leader</p>
+                
+                <div class="founder-direct-mail mt-8" style="background: rgba(255, 77, 0, 0.04); border: 1px solid rgba(255, 77, 0, 0.2); border-radius: 20px; padding: 24px; max-width: 320px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);">
+                  <p class="mail-label text-muted-light" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; color: var(--accent);">Talk with our Founder</p>
+                  <a href="mailto:sekhar.maya@gmail.com" class="mail-link text-white font-bold mt-2" style="display: block; font-size: 1.15rem; text-decoration: none; word-break: break-all; transition: var(--transition-smooth); font-weight: 700;">
+                    sekhar.maya@gmail.com
+                  </a>
+                  <a href="mailto:sekhar.maya@gmail.com" class="pill-btn light-btn mt-6" style="padding: 8px 16px; font-size: 0.8rem; width: fit-content; display: inline-flex;">
+                    <span>Send a Message</span>
+                    <span class="btn-dot bg-accent"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Right Column: Biography Paragraphs -->
+            <div class="leadership-right" style="display: flex; align-items: center;">
+              <div class="bio-content" style="max-width: 600px;">
+                <p class="bio-paragraph text-muted-light" style="font-size: 1.15rem; line-height: 1.6; font-weight: 300;">Dr. Krishna Sekhar Vattikuti is a visionary technology entrepreneur, creative strategist, and digital innovator with a strong track record of building and leading cutting-edge technology and creative initiatives.</p>
+                <p class="bio-paragraph text-muted-light mt-6" style="font-size: 1.15rem; line-height: 1.6; font-weight: 300;">With deep expertise at the intersection of technology, immersive media, and digital transformation, he has spent his 27 years of career exploring how emerging technologies can reshape industries and unlock new business opportunities.</p>
+                <p class="bio-paragraph text-muted-light mt-6" style="font-size: 1.15rem; line-height: 1.6; font-weight: 300;">As the Founder of Lope Tech, Dr. Vattikuti is focused on building a next-generation technology company that delivers innovative digital solutions powered by AI, immersive technologies, and scalable digital platforms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 9: FAQ ACCORDIONS (Light Theme) -->
+      <section id="faq" class="section faq-section light-bg scroll-trigger" data-theme="light">
+        <div class="section-container">
+          <div class="faq-grid-layout">
+            <div class="faq-left-column">
+              <h2 class="huge-section-title text-dark condensed-font">FAQ.</h2>
+              <p class="large-desc text-muted-dark mt-6">Got questions? We've got answers. Here's everything you need to know about working with us on custom AI workflows, agents, databases, and high-performance software.</p>
+            </div>
+            <div class="faq-right-column">
+              <div class="faq-accordion-list">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item active">
+                  <div class="faq-header">
+                    <h3 class="faq-title text-dark">What kinds of custom AI agents and LLM integrations do you build?</h3>
+                    <button class="faq-toggle-btn" aria-label="Toggle answer">
+                      <i data-lucide="plus" class="faq-icon-plus"></i>
+                    </button>
+                  </div>
+                  <div class="faq-content">
+                    <p class="faq-desc text-muted-dark">We build autonomous AI agents tailored to automate complex operations, retrieval-augmented generation (RAG) systems that connect LLMs to your private data secure databases, and custom model fine-tuning utilizing state-of-the-art frameworks like LangChain, OpenAI, and Claude.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <h3 class="faq-title text-dark">How do you ensure data security and privacy when developing AI solutions?</h3>
+                    <button class="faq-toggle-btn" aria-label="Toggle answer">
+                      <i data-lucide="plus" class="faq-icon-plus"></i>
+                    </button>
+                  </div>
+                  <div class="faq-content">
+                    <p class="faq-desc text-muted-dark">Security is our core priority. We construct sandboxed vector databases, leverage enterprise-grade APIs with zero-data retention policies, and implement local, self-hosted LLMs when necessary to guarantee your proprietary business intelligence remains completely confidential and private.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <h3 class="faq-title text-dark">What tech stacks do you leverage for high-performance apps and websites?</h3>
+                    <button class="faq-toggle-btn" aria-label="Toggle answer">
+                      <i data-lucide="plus" class="faq-icon-plus"></i>
+                    </button>
+                  </div>
+                  <div class="faq-content">
+                    <p class="faq-desc text-muted-dark">We build lightning-fast web experiences using modern architectures like Next.js, React, Node.js, and TailwindCSS. For mobile apps, we deploy cross-platform architectures using Flutter or React Native, alongside native Kotlin and Swift integrations to achieve maximum performance and native UI response.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <h3 class="faq-title text-dark">Can you integrate custom AI workflows into our existing legacy systems?</h3>
+                    <button class="faq-toggle-btn" aria-label="Toggle answer">
+                      <i data-lucide="plus" class="faq-icon-plus"></i>
+                    </button>
+                  </div>
+                  <div class="faq-content">
+                    <p class="faq-desc text-muted-dark">Absolutely. We engineer custom API layers, webhooks, and middleware that act as a bridge between your legacy databases or enterprise systems and modern AI pipelines, allowing you to scale intelligent automation without rewriting your core infrastructure.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                  <div class="faq-header">
+                    <h3 class="faq-title text-dark">Who owns the final code, custom AI models, and intellectual property?</h3>
+                    <button class="faq-toggle-btn" aria-label="Toggle answer">
+                      <i data-lucide="plus" class="faq-icon-plus"></i>
+                    </button>
+                  </div>
+                  <div class="faq-content">
+                    <p class="faq-desc text-muted-dark">You do. Once project milestones are complete and finalized, 100% of the custom codebase, database schemas, custom model parameters, and intellectual property are fully transferred to your business with zero recurring licensing fees.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 10: CONTACT & FOOTER (Dark Theme Boxed Card) -->
+      <section id="contact" class="section contact-section dark-bg scroll-trigger" data-theme="dark">
+        <div class="section-container">
+          <div class="contact-rounded-container">
+            <div class="contact-grain-overlay"></div>
+            
+            <div class="contact-grid-layout">
+              <!-- Left Column: White Contact Form Card -->
+              <div class="contact-form-column">
+                <div class="contact-form-card">
+                  <h3 class="contact-form-title text-dark">
+                    <span class="text-accent font-bold">Have a project</span> in mind?
+                  </h3>
+                  
+                  <form class="actual-contact-form" id="project-contact-form">
+                    <div class="form-group">
+                      <label for="user-name">Your name*</label>
+                      <input type="text" id="user-name" name="name" placeholder="John Doe" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="user-email">E-mail*</label>
+                      <input type="email" id="user-email" name="email" placeholder="hello@site.com" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="user-phone">Phone number*</label>
+                      <input type="tel" id="user-phone" name="phone" placeholder="+91 98765 43210" required />
+                    </div>
+                    <div class="form-group">
+                      <label for="user-message">Message</label>
+                      <textarea id="user-message" name="message" placeholder="Tell us about your project..." rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit-btn pill-btn dark-btn">Send Message</button>
+                  </form>
+                  <p class="form-policy text-muted-dark">By submitting, you agree to our Terms and Privacy Policy.</p>
+                </div>
+              </div>
+
+              <!-- Right Column: Info & Details -->
+              <div class="contact-info-column">
+                <div class="contact-info-wrap">
+                  <h2 class="contact-main-heading text-white condensed-font">Let's talk.</h2>
+                  <p class="large-desc text-muted-light mt-4">Tell us about your AI initiative — whether it's autonomous agents, predictive analytics, LLM integration, or a full-scale AI product build.</p>
+                  
+                  <div class="contact-features-grid mt-12">
+                    <div class="contact-feature-card">
+                      <div class="feature-icon-box">
+                        <i data-lucide="zap" class="feature-icon text-accent"></i>
+                      </div>
+                      <h4 class="feature-title text-white">Quick response.</h4>
+                      <p class="feature-desc text-muted-light">If you're ready to create and collaborate, we'd love to hear from you. We respond within 24 hours.</p>
+                    </div>
+                    <div class="contact-feature-card">
+                      <div class="feature-icon-box">
+                        <i data-lucide="milestone" class="feature-icon text-accent"></i>
+                      </div>
+                      <h4 class="feature-title text-white">Clear next steps.</h4>
+                      <p class="feature-desc text-muted-light">After the consultation, we'll provide you with a comprehensive scope, custom plan, and realistic timeline.</p>
+                    </div>
+                  </div>
+
+                  <!-- Direct Ask Card -->
+                  <div class="contact-direct-card mt-12">
+                    <div class="direct-avatar-wrap" style="background: rgba(255, 77, 0, 0.1); border-color: var(--accent); display: flex; justify-content: center; align-items: center; border-radius: 50%; width: 50px; height: 50px;">
+                      <i data-lucide="sparkles" class="text-accent" style="width: 24px; height: 24px;"></i>
+                    </div>
+                    <div class="direct-text-wrap">
+                      <p class="direct-role text-muted-light">Direct Engagement</p>
+                      <h4 class="direct-name text-white" style="font-size: 1.1rem; margin-bottom: 8px;">lopetechai@gmail.com</h4>
+                      <a href="mailto:lopetechai@gmail.com" class="pill-btn light-btn direct-email-btn" style="padding: 8px 16px; font-size: 0.8rem;">
+                        <span>Ask directly</span>
+                        <span class="btn-dot bg-accent"></span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Details -->
+            <div class="contact-footer-bar mt-20">
+              <div class="footer-left-col">
+                <div class="footer-logo">
+                  <svg viewBox="20 10 60 80" class="logo-icon-svg" style="width: 20px; height: 26px;">
+                    <polygon points="32.5,21.25 45,27.5 45,77.5 32.5,71.25" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                    <polygon points="57.5,58.75 45,52.5 45,77.5 57.5,83.75" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                    <polygon points="57.5,21.25 45,27.5 45,52.5 57.5,46.25" fill="#e2e2e2" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                    <polygon points="70,52.5 57.5,58.75 57.5,71.25 70,65" fill="#e2e2e2" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                    <polygon points="32.5,21.25 45,15 57.5,21.25 45,27.5" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                    <polygon points="45,52.5 57.5,46.25 70,52.5 57.5,58.75" fill="#ffffff" stroke="#070707" stroke-width="1.5" stroke-linejoin="round" />
+                  </svg>
+                  <span class="logo-text text-white">Lope <span class="logo-gold">Tech</span></span>
+                </div>
+                <p class="footer-desc text-muted-light mt-4">Architecting enterprise AI solutions and proprietary intelligent products that transform industries.</p>
+                <div class="footer-status mt-4">
+                  <span class="status-pulse"></span>
+                  <span class="status-text text-white">Accepting new AI engagements</span>
+                </div>
+              </div>
+              <div class="footer-right-col">
+                <div class="footer-social-links">
+                  <a href="#" class="social-icon-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                  <a href="#" class="social-icon-btn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                  <a href="#" class="social-icon-btn" aria-label="Github"><i data-lucide="github"></i></a>
+                </div>
+                <p class="footer-copyright mt-6">© 2026 Lope Tech. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Floating Works Stack Button -->
+    <div class="floating-works-stack" id="floating-work-stack-btn">
+      <div class="floating-stack-text">View Works</div>
+      <div class="floating-stack-thumbnails">
+        <img src="/Lopetech-webdite/shoe_pit.png" alt="Shoe Pit preview" class="thumb-stacked stack-1" />
+        <img src="/Lopetech-webdite/amakh_mockup.png" alt="Amakh preview" class="thumb-stacked stack-2" />
+      </div>
+    </div>
+
+    <!-- Main JS Application script -->
+  </body>
+</html>
