@@ -7,34 +7,28 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // --- 1. PREMIUM PRELOADER COUNTDOWN ---
+  // --- 1. ORIONEX-STYLE PRELOADER (Cycling Characters) ---
   const preloader = document.getElementById('preloader');
-  const percentText = document.getElementById('preloader-percentage');
-  const loaderLine = document.querySelector('.preloader-line');
+  const characters = document.querySelectorAll('.preloader-character');
+  let currentChar = 0;
   
-  let percentage = 0;
-  const countSpeed = 20; // ms per increment
-  
-  const loaderInterval = setInterval(() => {
-    percentage += Math.floor(Math.random() * 4) + 1; // Randomly increment to feel organic
-    
-    if (percentage >= 100) {
-      percentage = 100;
-      clearInterval(loaderInterval);
-      
-      // Load completed
-      setTimeout(() => {
-        preloader.classList.add('loaded');
-        // Trigger initial entrance animations
-        document.body.style.overflowY = 'auto';
-      }, 500);
-    }
-    
-    percentText.textContent = `${percentage}%`;
-    if (loaderLine) {
-      loaderLine.style.width = `${percentage}%`;
-    }
-  }, countSpeed);
+  // Cycle through characters every 800ms
+  const charCycle = setInterval(() => {
+    characters[currentChar].classList.remove('active');
+    currentChar = (currentChar + 1) % characters.length;
+    characters[currentChar].classList.add('active');
+  }, 800);
+
+  // After ~3 seconds, fade out the preloader
+  setTimeout(() => {
+    clearInterval(charCycle);
+    preloader.classList.add('loaded');
+    document.body.style.overflowY = 'auto';
+    // Remove from DOM after fade
+    setTimeout(() => {
+      preloader.style.display = 'none';
+    }, 700);
+  }, 3000);
 
   // Disable scrolling while preloader runs
   document.body.style.overflowY = 'hidden';
