@@ -17,71 +17,31 @@
     <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glows">
+      <div class="glow-blob blob-1"></div>
+      <div class="glow-blob blob-2"></div>
+      <div class="glow-blob blob-3"></div>
+    </div>
+
+    <!-- 3D Particle Canvas Background -->
+    <canvas id="hero-3d-canvas" class="hero-3d-canvas"></canvas>
+
     <!-- Film Grain Overlay -->
     <div class="grain-overlay"></div>
 
     <!-- Glossy Cursor Follower (Desktop Only) -->
     <div class="cursor-follower"></div>
 
-    <!-- Custom Preloader (Orionex-Style) -->
+    <!-- Cinematic Storytelling Preloader -->
     <div id="preloader" class="preloader">
-      <div class="preloader-stage">
-        <!-- Triangle Character -->
-        <div class="preloader-character active" id="char-triangle">
-          <svg viewBox="0 0 120 120" class="character-svg" overflow="visible">
-            <g class="character-body">
-              <path d="M 60 10 L 105 95 Q 108 105 98 105 L 22 105 Q 12 105 15 95 Z" fill="#e8553a"/>
-              <!-- Eyes -->
-              <circle cx="45" cy="62" r="10" fill="white"/>
-              <circle cx="48" cy="64" r="5" fill="#1a1a1a"/>
-              <circle cx="50" cy="62" r="1.5" fill="white"/>
-              <circle cx="72" cy="55" r="10" fill="white"/>
-              <circle cx="75" cy="57" r="5" fill="#1a1a1a"/>
-              <circle cx="77" cy="55" r="1.5" fill="white"/>
-              <!-- Mouth (surprised "O") -->
-              <ellipse cx="60" cy="82" rx="7" ry="9" fill="#1a1a1a"/>
-            </g>
-          </svg>
-          <div class="character-shadow"></div>
-        </div>
-
-        <!-- Circle Character -->
-        <div class="preloader-character" id="char-circle">
-          <svg viewBox="0 0 120 120" class="character-svg" overflow="visible">
-            <g class="character-body">
-              <circle cx="60" cy="60" r="48" fill="#e8553a"/>
-              <!-- Eyes -->
-              <circle cx="42" cy="52" r="10" fill="white"/>
-              <circle cx="45" cy="54" r="5" fill="#1a1a1a"/>
-              <circle cx="47" cy="52" r="1.5" fill="white"/>
-              <circle cx="78" cy="52" r="10" fill="white"/>
-              <circle cx="81" cy="54" r="5" fill="#1a1a1a"/>
-              <circle cx="83" cy="52" r="1.5" fill="white"/>
-              <!-- Mouth (small round) -->
-              <ellipse cx="60" cy="78" rx="6" ry="5" fill="#1a1a1a"/>
-            </g>
-          </svg>
-          <div class="character-shadow"></div>
-        </div>
-
-        <!-- Diamond/Square Character -->
-        <div class="preloader-character" id="char-diamond">
-          <svg viewBox="0 0 120 120" class="character-svg" overflow="visible">
-            <g class="character-body">
-              <rect x="18" y="18" width="84" height="84" rx="16" fill="#e8553a" transform="rotate(45 60 60)"/>
-              <!-- Eyes -->
-              <circle cx="42" cy="52" r="10" fill="white"/>
-              <circle cx="39" cy="50" r="5" fill="#1a1a1a"/>
-              <circle cx="37" cy="48" r="1.5" fill="white"/>
-              <circle cx="72" cy="42" r="10" fill="white"/>
-              <circle cx="69" cy="40" r="5" fill="#1a1a1a"/>
-              <circle cx="67" cy="38" r="1.5" fill="white"/>
-              <!-- Mouth (wide smile) -->
-              <path d="M 42 68 Q 57 92 72 68 Q 57 80 42 68 Z" fill="#1a1a1a"/>
-              <path d="M 52 78 Q 57 88 62 78 Z" fill="#e8553a"/>
-            </g>
-          </svg>
-          <div class="character-shadow"></div>
+      <div class="preloader-cinematic-content">
+        <div class="preloader-title condensed-font reveal-item stagger-1">LOPE <span class="text-accent">TECH</span></div>
+        <div class="preloader-divider reveal-item stagger-2"></div>
+        <div class="preloader-subtitle reveal-item stagger-3">INTELLIGENT SYSTEMS</div>
+        <div class="preloader-desc reveal-item stagger-4">ENGINEERED FOR PRECISION</div>
+        <div class="preloader-progress-wrap reveal-item stagger-5">
+          <div class="preloader-progress-bar"></div>
         </div>
       </div>
     </div>
@@ -138,20 +98,23 @@
         </div>
         
         <!-- Centerpiece Brand Typography Centerpiece (No Image) -->
-        <div class="hero-centerpiece-container">
-          <h1 class="hero-main-title condensed-font">LOPE <span class="text-accent">TECH</span></h1>
-          <div class="hero-cursive-overlay handwriting-font">
+        <div class="hero-centerpiece-container" id="hero-centerpiece">
+          <h1 class="hero-main-title condensed-font" id="hero-title">
+            <span class="hero-word" data-scroll-speed="-0.3">LOPE</span>
+            <span class="hero-word text-accent" data-scroll-speed="-0.5">&nbsp;TECH</span>
+          </h1>
+          <div class="hero-cursive-overlay handwriting-font" id="hero-cursive" data-scroll-speed="-0.2">
             Architecting the future of Enterprise AI
           </div>
         </div>
 
         <!-- Balanced Bottom Row: Slogan on Left, Direct Email on Right -->
-        <div class="hero-bottom-grid">
-          <div class="hero-bottom-desc">
+        <div class="hero-bottom-grid" id="hero-bottom">
+          <div class="hero-bottom-desc" id="hero-desc" data-scroll-speed="-0.15">
             <p class="hero-desc-paragraph text-muted-light">We are a premier AI engineering firm building scalable, proprietary AI products and delivering bespoke artificial intelligence solutions for forward-thinking enterprises.</p>
           </div>
           
-          <div class="hero-bottom-contact">
+          <div class="hero-bottom-contact" id="hero-contact" data-scroll-speed="-0.25">
             <p class="hero-card-role">Direct Contact</p>
             <h3 class="hero-card-name" style="font-size: 1.1rem; color: #fff; margin: 4px 0 12px; font-weight: 700;">lopetechai@gmail.com</h3>
             <a href="mailto:lopetechai@gmail.com" class="pill-btn light-btn hero-cta-btn" style="padding: 8px 16px; font-size: 0.8rem;">
@@ -161,23 +124,23 @@
           </div>
         </div>
 
-        <div class="hero-scroll-indicator">
+        <div class="hero-scroll-indicator" id="hero-scroll-indicator">
           <p>Scroll to explore</p>
           <div class="scroll-arrow-down"></div>
         </div>
       </section>
 
 
-      <!-- SECTION 3: WORK PORTFOLIO (Light Theme) -->
-      <section id="work" class="section work-section light-bg scroll-trigger" data-theme="light">
+      <!-- SECTION 3: WORK PORTFOLIO (Dark Theme) -->
+      <section id="work" class="section work-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark">
         <div class="section-container">
           <div class="work-header-grid">
             <div class="work-title-wrap reveal-on-scroll stagger-1">
-              <h2 class="huge-section-title text-dark condensed-font">Case Studies.</h2>
+              <h2 class="huge-section-title text-white condensed-font">Case Studies.</h2>
               <span class="work-year-tag text-accent font-bold">©2026</span>
             </div>
             <div class="work-desc-wrap reveal-on-scroll stagger-2">
-              <p class="large-desc text-muted-dark">Real-world AI implementations showcasing how we deploy intelligent systems, predictive models, and autonomous agents that drive measurable business outcomes.</p>
+              <p class="large-desc text-muted-light">Real-world AI implementations showcasing how we deploy intelligent systems, predictive models, and autonomous agents that drive measurable business outcomes.</p>
             </div>
           </div>
 
@@ -188,7 +151,7 @@
               <div class="project-card-header">
                 <div class="project-info">
                   <span class="project-num">(01)</span>
-                  <h3 class="project-title text-dark">RetailSense AI</h3>
+                  <h3 class="project-title text-white">RetailSense AI</h3>
                   <span class="project-sep">/</span>
                   <span class="project-category">AI-Powered E-commerce</span>
                 </div>
@@ -213,7 +176,7 @@
               <div class="project-card-header">
                 <div class="project-info">
                   <span class="project-num">(02)</span>
-                  <h3 class="project-title text-dark">EduMind AI</h3>
+                  <h3 class="project-title text-white">EduMind AI</h3>
                   <span class="project-sep">/</span>
                   <span class="project-category">AI Learning Platform</span>
                 </div>
@@ -236,14 +199,422 @@
 
           <!-- Upcoming Projects -->
           <div class="upcoming-work-header reveal-on-scroll stagger-1">
-            <h3 class="text-dark font-bold text-xl mb-6 uppercase tracking-wider" style="letter-spacing: 0.1em; color: rgba(0,0,0,0.5);">Upcoming Glimpses</h3>
-            <div class="upcoming-glimpse-card" title="JurisAI - Intelligent Legal Copilot">
-              <div class="glimpse-abstract-ui"></div>
-              <div class="glimpse-grid-overlay"></div>
-              <div class="glimpse-glass-panel">
-                <span class="glimpse-tag">Coming Soon</span>
-                <h3 class="glimpse-title">JurisAI</h3>
-                <p class="glimpse-subtitle">Intelligent Legal Copilot. Smart legal assistance. Simplified decisions.</p>
+            <h3 class="text-white font-bold text-xl mb-6 uppercase tracking-wider" style="letter-spacing: 0.1em; color: rgba(255,255,255,0.55);">Upcoming Glimpses</h3>
+            
+            <div class="upcoming-projects-grid">
+              <!-- Project: AI Health Chatbot -->
+              <div class="upcoming-glimpse-card upcoming-img-card" style="--accent-color: #00f0ff; --accent-glow: rgba(0, 240, 255, 0.25);" title="AI Health Chatbot — Conversational Health Assistant">
+                <div class="glimpse-scan-line"></div>
+                <div class="glimpse-corner tl"></div>
+                <div class="glimpse-corner tr"></div>
+                <div class="glimpse-corner bl"></div>
+                <div class="glimpse-corner br"></div>
+                <div class="glimpse-grid-overlay"></div>
+                
+                <div class="glimpse-hud-header">
+                  <span class="hud-system-id">SYS-ID: [01_HLTH]</span>
+                  <span class="hud-status">
+                    <span class="hud-status-dot pulsing"></span>
+                    <span class="hud-status-text">ONLINE</span>
+                  </span>
+                </div>
+
+                <div class="upcoming-img-wrapper">
+                  <img src="/ai_health_chatbot.png" alt="AI Health Chatbot — Conversational Assistant for General Health Queries & Guidance" class="upcoming-img" loading="lazy" />
+                </div>
+
+                <div class="glimpse-hud-metrics">
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">ACCURACY</span>
+                    <span class="hud-metric-val">98.6%</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">LATENCY</span>
+                    <span class="hud-metric-val">12ms</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">MODEL</span>
+                    <span class="hud-metric-val">LLAMA-3.1</span>
+                  </div>
+                </div>
+
+                <div class="glimpse-glass-panel upcoming-img-panel">
+                  <div class="glimpse-glass-header">
+                    <span class="glimpse-tag-new">WELLNESS-AI</span>
+                    <span class="glimpse-phase">PHASE I - DEV</span>
+                  </div>
+                  <h3 class="glimpse-title-new">AI Health Chatbot</h3>
+                  
+                  <div class="glimpse-collapsible-content">
+                    <p class="glimpse-subtitle-new">Conversational AI assistant for real-time health queries, symptom guidance, and wellness support.</p>
+                    
+                    <div class="glimpse-specs-grid">
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">SECURITY</span>
+                        <span class="spec-val">HIPAA COMPLIANT</span>
+                      </div>
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">INTEGRATION</span>
+                        <span class="spec-val">CROSS-PLATFORM</span>
+                      </div>
+                    </div>
+
+                    <div class="glimpse-action-btn">
+                      <span>INITIALIZE DEMO</span>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project: ScanMorph AI -->
+              <div class="upcoming-glimpse-card upcoming-img-card" style="--accent-color: #bf5af2; --accent-glow: rgba(191, 90, 242, 0.25);" title="ScanMorph AI — MRI to CT Conversion">
+                <div class="glimpse-scan-line"></div>
+                <div class="glimpse-corner tl"></div>
+                <div class="glimpse-corner tr"></div>
+                <div class="glimpse-corner bl"></div>
+                <div class="glimpse-corner br"></div>
+                <div class="glimpse-grid-overlay"></div>
+                
+                <div class="glimpse-hud-header">
+                  <span class="hud-system-id">SYS-ID: [02_MORPH]</span>
+                  <span class="hud-status">
+                    <span class="hud-status-dot pulsing"></span>
+                    <span class="hud-status-text">ACTIVE</span>
+                  </span>
+                </div>
+
+                <div class="upcoming-img-wrapper">
+                  <img src="/scanmorph_ai.png" alt="ScanMorph AI — One scan, multiple insights. MRI to CT and CT to MRI conversion." class="upcoming-img" loading="lazy" />
+                </div>
+
+                <div class="glimpse-hud-metrics">
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">ACCURACY</span>
+                    <span class="hud-metric-val">99.1%</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">LATENCY</span>
+                    <span class="hud-metric-val">180ms</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">NET</span>
+                    <span class="hud-metric-val">GAN-DIFFUSION</span>
+                  </div>
+                </div>
+
+                <div class="glimpse-glass-panel upcoming-img-panel">
+                  <div class="glimpse-glass-header">
+                    <span class="glimpse-tag-new">MED-IMAGING</span>
+                    <span class="glimpse-phase">PHASE II - TEST</span>
+                  </div>
+                  <h3 class="glimpse-title-new">ScanMorph AI</h3>
+                  
+                  <div class="glimpse-collapsible-content">
+                    <p class="glimpse-subtitle-new">Advanced AI platform converting MRI scans to CT-like images and vice versa for faster diagnostics.</p>
+                    
+                    <div class="glimpse-specs-grid">
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">DIMENSIONS</span>
+                        <span class="spec-val">3D MULTI-PLANAR</span>
+                      </div>
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">COMPUTE</span>
+                        <span class="spec-val">A100 POOL</span>
+                      </div>
+                    </div>
+
+                    <div class="glimpse-action-btn">
+                      <span>INITIALIZE DEMO</span>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project: VR Therapy -->
+              <div class="upcoming-glimpse-card upcoming-img-card" style="--accent-color: #ff2d55; --accent-glow: rgba(255, 45, 85, 0.25);" title="VR Therapy — Immersive Therapy Platform">
+                <div class="glimpse-scan-line"></div>
+                <div class="glimpse-corner tl"></div>
+                <div class="glimpse-corner tr"></div>
+                <div class="glimpse-corner bl"></div>
+                <div class="glimpse-corner br"></div>
+                <div class="glimpse-grid-overlay"></div>
+                
+                <div class="glimpse-hud-header">
+                  <span class="hud-system-id">SYS-ID: [03_VRTH]</span>
+                  <span class="hud-status">
+                    <span class="hud-status-dot pulsing"></span>
+                    <span class="hud-status-text">SIMULATING</span>
+                  </span>
+                </div>
+
+                <div class="upcoming-img-wrapper">
+                  <img src="/vr_therapy.png" alt="VR Therapy — Immersive therapy. Real results." class="upcoming-img" loading="lazy" />
+                </div>
+
+                <div class="glimpse-hud-metrics">
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">IMMERSION</span>
+                    <span class="hud-metric-val">95%</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">FPS</span>
+                    <span class="hud-metric-val">90Hz</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">ENGINE</span>
+                    <span class="hud-metric-val">WEBGL-THREE</span>
+                  </div>
+                </div>
+
+                <div class="glimpse-glass-panel upcoming-img-panel">
+                  <div class="glimpse-glass-header">
+                    <span class="glimpse-tag-new">NEURO-RECOVERY</span>
+                    <span class="glimpse-phase">PHASE I - PROTOTYPE</span>
+                  </div>
+                  <h3 class="glimpse-title-new">VR Therapy</h3>
+                  
+                  <div class="glimpse-collapsible-content">
+                    <p class="glimpse-subtitle-new">Evidence-based immersive experiences for accelerated recovery, mental health, and well-being.</p>
+                    
+                    <div class="glimpse-specs-grid">
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">FEEDBACK</span>
+                        <span class="spec-val">HAPTIC LINK</span>
+                      </div>
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">BIOMETRIC</span>
+                        <span class="spec-val">ECG / EEG</span>
+                      </div>
+                    </div>
+
+                    <div class="glimpse-action-btn">
+                      <span>INITIALIZE DEMO</span>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project: AI Symptom Checker -->
+              <div class="upcoming-glimpse-card upcoming-img-card" style="--accent-color: #ff9f0a; --accent-glow: rgba(255, 159, 10, 0.25);" title="AI Symptom Checker — Smart Health Guidance">
+                <div class="glimpse-scan-line"></div>
+                <div class="glimpse-corner tl"></div>
+                <div class="glimpse-corner tr"></div>
+                <div class="glimpse-corner bl"></div>
+                <div class="glimpse-corner br"></div>
+                <div class="glimpse-grid-overlay"></div>
+                
+                <div class="glimpse-hud-header">
+                  <span class="hud-system-id">SYS-ID: [04_SYMP]</span>
+                  <span class="hud-status">
+                    <span class="hud-status-dot pulsing"></span>
+                    <span class="hud-status-text">STANDBY</span>
+                  </span>
+                </div>
+
+                <div class="upcoming-img-wrapper">
+                  <img src="/ai_symptom_checker.png" alt="AI Symptom Checker — Simple AI-powered health guidance" class="upcoming-img" loading="lazy" />
+                </div>
+
+                <div class="glimpse-hud-metrics">
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">ACCURACY</span>
+                    <span class="hud-metric-val">96.2%</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">TRIAGE</span>
+                    <span class="hud-metric-val">5-LEVEL</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">INTENT</span>
+                    <span class="hud-metric-val">NLP-PARSER</span>
+                  </div>
+                </div>
+
+                <div class="glimpse-glass-panel upcoming-img-panel">
+                  <div class="glimpse-glass-header">
+                    <span class="glimpse-tag-new">DIAGNOSTICS</span>
+                    <span class="glimpse-phase">PHASE III - INTEGRATING</span>
+                  </div>
+                  <h3 class="glimpse-title-new">AI Symptom Checker</h3>
+                  
+                  <div class="glimpse-collapsible-content">
+                    <p class="glimpse-subtitle-new">Intelligent systems that analyze symptoms through simple chat and provide instant health insights.</p>
+                    
+                    <div class="glimpse-specs-grid">
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">COVERAGE</span>
+                        <span class="spec-val">800+ DISEASES</span>
+                      </div>
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">PLATFORM</span>
+                        <span class="spec-val">CROSS-API</span>
+                      </div>
+                    </div>
+
+                    <div class="glimpse-action-btn">
+                      <span>INITIALIZE DEMO</span>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project: Medical Knowledge Engine -->
+              <div class="upcoming-glimpse-card upcoming-img-card" style="--accent-color: #0a84ff; --accent-glow: rgba(10, 132, 255, 0.25);" title="Medical Knowledge Engine — AI Medical Search">
+                <div class="glimpse-scan-line"></div>
+                <div class="glimpse-corner tl"></div>
+                <div class="glimpse-corner tr"></div>
+                <div class="glimpse-corner bl"></div>
+                <div class="glimpse-corner br"></div>
+                <div class="glimpse-grid-overlay"></div>
+                
+                <div class="glimpse-hud-header">
+                  <span class="hud-system-id">SYS-ID: [05_KNOW]</span>
+                  <span class="hud-status">
+                    <span class="hud-status-dot pulsing"></span>
+                    <span class="hud-status-text">INDEXING</span>
+                  </span>
+                </div>
+
+                <div class="upcoming-img-wrapper">
+                  <img src="/medical_knowledge_engine.png" alt="Medical Knowledge Engine — Search smarter. Trust deeper. Care better." class="upcoming-img" loading="lazy" />
+                </div>
+
+                <div class="glimpse-hud-metrics">
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">SOURCES</span>
+                    <span class="hud-metric-val">1.2M+</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">RAG-SPEED</span>
+                    <span class="hud-metric-val">&lt;80ms</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">VECTORS</span>
+                    <span class="hud-metric-val">PGVECTOR</span>
+                  </div>
+                </div>
+
+                <div class="glimpse-glass-panel upcoming-img-panel">
+                  <div class="glimpse-glass-header">
+                    <span class="glimpse-tag-new">COGNITIVE-KB</span>
+                    <span class="glimpse-phase">PHASE II - REFINING</span>
+                  </div>
+                  <h3 class="glimpse-title-new">Medical Knowledge Engine</h3>
+                  
+                  <div class="glimpse-collapsible-content">
+                    <p class="glimpse-subtitle-new">Powerful AI search delivering accurate, evidence-based medical information from trusted sources.</p>
+                    
+                    <div class="glimpse-specs-grid">
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">UPDATES</span>
+                        <span class="spec-val">REAL-TIME FEED</span>
+                      </div>
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">BENCHMARK</span>
+                        <span class="spec-val">MED-QA STATE</span>
+                      </div>
+                    </div>
+
+                    <div class="glimpse-action-btn">
+                      <span>INITIALIZE DEMO</span>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project: JurisAI (existing) -->
+              <div class="upcoming-glimpse-card upcoming-img-card" style="--accent-color: #ffd60a; --accent-glow: rgba(255, 214, 10, 0.25);" title="JurisAI - Intelligent Legal Copilot">
+                <div class="glimpse-scan-line"></div>
+                <div class="glimpse-corner tl"></div>
+                <div class="glimpse-corner tr"></div>
+                <div class="glimpse-corner bl"></div>
+                <div class="glimpse-corner br"></div>
+                <div class="glimpse-grid-overlay"></div>
+                
+                <div class="glimpse-hud-header">
+                  <span class="hud-system-id">SYS-ID: [06_LEGAL]</span>
+                  <span class="hud-status">
+                    <span class="hud-status-dot pulsing"></span>
+                    <span class="hud-status-text">STANDBY</span>
+                  </span>
+                </div>
+
+                <div class="upcoming-img-wrapper glimpse-terminal-bg">
+                  <div class="terminal-grid"></div>
+                  <svg class="terminal-node-graph" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="30" stroke="rgba(255, 214, 10, 0.12)" stroke-width="0.5" fill="none" stroke-dasharray="2 2" />
+                    <circle cx="50" cy="50" r="20" stroke="rgba(255, 214, 10, 0.2)" stroke-width="0.5" fill="none" />
+                    <line x1="50" y1="10" x2="50" y2="90" stroke="rgba(255, 214, 10, 0.08)" stroke-width="0.5" />
+                    <line x1="10" y1="50" x2="90" y2="50" stroke="rgba(255, 214, 10, 0.08)" stroke-width="0.5" />
+                    <path d="M30 30 L50 50 L70 30" stroke="#ffd60a" stroke-width="0.75" fill="none" opacity="0.5" class="hud-pulse-path" />
+                    <path d="M30 70 L50 50 L70 70" stroke="#ffd60a" stroke-width="0.75" fill="none" opacity="0.5" class="hud-pulse-path-reverse" />
+                    <circle cx="50" cy="50" r="3" fill="#ffd60a" class="hud-pulse-node" />
+                    <circle cx="30" cy="30" r="2" fill="#ffd60a" opacity="0.7" />
+                    <circle cx="70" cy="30" r="2" fill="#ffd60a" opacity="0.7" />
+                    <circle cx="30" cy="70" r="2" fill="#ffd60a" opacity="0.7" />
+                    <circle cx="70" cy="70" r="2" fill="#ffd60a" opacity="0.7" />
+                  </svg>
+                </div>
+
+                <div class="glimpse-hud-metrics">
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">COMPLIANCE</span>
+                    <span class="hud-metric-val">100%</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">LLM</span>
+                    <span class="hud-metric-val">CLAUDE-3.5</span>
+                  </div>
+                  <div class="hud-metric-row">
+                    <span class="hud-metric-label">DOCS</span>
+                    <span class="hud-metric-val">PARSED</span>
+                  </div>
+                </div>
+
+                <div class="glimpse-glass-panel upcoming-img-panel">
+                  <div class="glimpse-glass-header">
+                    <span class="glimpse-tag-new">LEGAL-TECH</span>
+                    <span class="glimpse-phase">PHASE I - PROTOTYPE</span>
+                  </div>
+                  <h3 class="glimpse-title-new">JurisAI</h3>
+                  
+                  <div class="glimpse-collapsible-content">
+                    <p class="glimpse-subtitle-new">Intelligent Legal Copilot. Smart legal assistance. Simplified decisions.</p>
+                    
+                    <div class="glimpse-specs-grid">
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">JURISDICTION</span>
+                        <span class="spec-val">GLOBAL FED</span>
+                      </div>
+                      <div class="glimpse-spec-box">
+                        <span class="spec-label">SECURITY</span>
+                        <span class="spec-val">SOC2 COMPLIANT</span>
+                      </div>
+                    </div>
+
+                    <div class="glimpse-action-btn">
+                      <span>INITIALIZE DEMO</span>
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -251,7 +622,7 @@
       </section>
 
       <!-- SECTION 4: DESIGN OVERVIEW (Dark Theme Transition) -->
-      <section id="overview" class="section overview-section dark-bg scroll-trigger" data-theme="dark">
+      <section id="overview" class="section overview-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark">
         <div class="hero-glow-layer">
           <div class="overview-radial-glow"></div>
         </div>
@@ -293,7 +664,7 @@
       </section>
 
       <!-- SECTION 5: SERVICES (Dark Theme grainy box) -->
-      <section id="services" class="section services-section dark-bg scroll-trigger" data-theme="dark">
+      <section id="services" class="section services-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark">
         <div class="services-grainy-container">
           <div class="section-container">
             <span class="small-tag text-accent font-bold mb-4 block">✦ AI SOLUTIONS</span>
@@ -446,8 +817,8 @@
         </div>
       </section>
 
-      <!-- SECTION 6: ABOUT & APPROACH (Light Theme Transition) -->
-      <section id="about" class="section about-section light-bg scroll-trigger" data-theme="light">
+      <!-- SECTION 6: ABOUT & APPROACH (Dark Theme) -->
+      <section id="about" class="section about-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark">
         <div class="section-container">
           <div class="about-grid-layout">
             <div class="about-tag-sidebar">
@@ -458,8 +829,8 @@
             <div class="about-content-body">
               <div class="about-header-row reveal-on-scroll stagger-1">
                 <span class="logo-badge-mini">Lope Tech</span>
-                <h2 class="huge-section-title text-dark">Our AI Transformation <span class="text-muted-dark">Framework</span> — from data to deployment.</h2>
-                <p class="large-desc text-muted-dark mt-6">We partner with enterprises to build production-ready AI systems. Our proven framework takes you from raw data to deployed, scalable intelligence — on time and on budget.</p>
+                <h2 class="huge-section-title text-white">Our AI Transformation <span class="text-muted-light">Framework</span> — from data to deployment.</h2>
+                <p class="large-desc text-muted-light mt-6">We partner with enterprises to build production-ready AI systems. Our proven framework takes you from raw data to deployed, scalable intelligence — on time and on budget.</p>
               </div>
 
               <!-- Approach 2x2 Grid -->
@@ -476,7 +847,7 @@
                     <div class="approach-icon-box">
                       <i data-lucide="eye" class="approach-icon"></i>
                     </div>
-                    <h3 class="approach-card-title text-dark">Audit data & define AI objectives</h3>
+                    <h3 class="approach-card-title text-white">Audit data & define AI objectives</h3>
                   </div>
                 </div>
 
@@ -492,7 +863,7 @@
                     <div class="approach-icon-box">
                       <i data-lucide="users" class="approach-icon"></i>
                     </div>
-                    <h3 class="approach-card-title text-dark">Train & validate custom models</h3>
+                    <h3 class="approach-card-title text-white">Train & validate custom models</h3>
                   </div>
                 </div>
 
@@ -508,7 +879,7 @@
                     <div class="approach-icon-box">
                       <i data-lucide="git-branch" class="approach-icon"></i>
                     </div>
-                    <h3 class="approach-card-title text-dark">Deploy to production with CI/CD</h3>
+                    <h3 class="approach-card-title text-white">Deploy to production with CI/CD</h3>
                   </div>
                 </div>
 
@@ -524,7 +895,7 @@
                     <div class="approach-icon-box">
                       <i data-lucide="shield-check" class="approach-icon"></i>
                     </div>
-                    <h3 class="approach-card-title text-dark">Monitor, optimize & scale continuously</h3>
+                    <h3 class="approach-card-title text-white">Monitor, optimize & scale continuously</h3>
                   </div>
                 </div>
               </div>
@@ -534,7 +905,7 @@
       </section>
 
       <!-- SECTION 7: SPECIALIST NETWORK / LEADERSHIP (Dark Theme) -->
-      <section id="founder" class="section founder-section dark-bg scroll-trigger" data-theme="dark">
+      <section id="founder" class="section founder-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark">
         <div class="section-container">
           <div class="founder-grid-layout">
             <div class="founder-left-col">
@@ -570,25 +941,25 @@
         </div>
       </section>
 
-      <!-- SECTION 8: STATS COUNTERS (Light Theme Transition) -->
-      <section id="stats" class="section stats-section light-bg scroll-trigger" data-theme="light">
+      <!-- SECTION 8: STATS COUNTERS (Dark Theme) -->
+      <section id="stats" class="section stats-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark">
         <div class="section-container">
           <div class="stats-counters-grid">
             <div class="stat-counter-card">
-              <h3 class="stat-number text-dark" data-target="50">0</h3>
-              <p class="stat-label text-muted-dark">AI Models Deployed</p>
+              <h3 class="stat-number text-white" data-target="50">0</h3>
+              <p class="stat-label text-muted-light">AI Models Deployed</p>
             </div>
             <div class="stat-counter-card">
-              <h3 class="stat-number text-dark" data-target="98">0</h3>
-              <p class="stat-label text-muted-dark">Client Retention %</p>
+              <h3 class="stat-number text-white" data-target="98">0</h3>
+              <p class="stat-label text-muted-light">Client Retention %</p>
             </div>
             <div class="stat-counter-card">
-              <h3 class="stat-number text-dark" data-target="5">0</h3>
-              <p class="stat-label text-muted-dark">Years in AI</p>
+              <h3 class="stat-number text-white" data-target="5">0</h3>
+              <p class="stat-label text-muted-light">Years in AI</p>
             </div>
             <div class="stat-counter-card">
-              <h3 class="stat-number text-dark" data-target="24">0</h3>
-              <p class="stat-label text-muted-dark">AI Engineers</p>
+              <h3 class="stat-number text-white" data-target="24">0</h3>
+              <p class="stat-label text-muted-light">AI Engineers</p>
             </div>
           </div>
 
@@ -607,14 +978,14 @@
               </a>
             </div>
             <div class="stats-text-col">
-              <p class="large-desc text-dark font-light">Our approach is precision-driven — we focus on model accuracy, inference speed, and production reliability. No unnecessary complexity, just high-impact AI engineering that delivers measurable business outcomes and competitive advantage.</p>
+              <p class="large-desc text-white font-light">Our approach is precision-driven — we focus on model accuracy, inference speed, and production reliability. No unnecessary complexity, just high-impact AI engineering that delivers measurable business outcomes and competitive advantage.</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- SECTION 8.5: LEADERSHIP / FOUNDER (Dark Theme Card Stack) -->
-      <section id="leadership" class="section leadership-section dark-bg scroll-trigger" data-theme="dark" style="background-color: #0c0c0c !important;">
+      <section id="leadership" class="section leadership-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark" style="background-color: #0c0c0c !important;">
         <div class="section-container" style="padding: 80px 0;">
           <div class="leadership-grid">
             <!-- Left Column: Name & Direct Contact -->
@@ -651,78 +1022,78 @@
         </div>
       </section>
 
-      <!-- SECTION 9: FAQ ACCORDIONS (Light Theme) -->
-      <section id="faq" class="section faq-section light-bg scroll-trigger" data-theme="light">
+      <!-- SECTION 9: FAQ ACCORDIONS (Dark Theme) -->
+      <section id="faq" class="section faq-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark">
         <div class="section-container">
           <div class="faq-grid-layout">
             <div class="faq-left-column">
-              <h2 class="huge-section-title text-dark condensed-font">FAQ.</h2>
-              <p class="large-desc text-muted-dark mt-6">Got questions? We've got answers. Here's everything you need to know about working with us on custom AI workflows, agents, databases, and high-performance software.</p>
+              <h2 class="huge-section-title text-white condensed-font">FAQ.</h2>
+              <p class="large-desc text-muted-light mt-6">Got questions? We've got answers. Here's everything you need to know about working with us on custom AI workflows, agents, databases, and high-performance software.</p>
             </div>
             <div class="faq-right-column">
               <div class="faq-accordion-list">
                 <!-- FAQ Item 1 -->
                 <div class="faq-item active">
                   <div class="faq-header">
-                    <h3 class="faq-title text-dark">What kinds of custom AI agents and LLM integrations do you build?</h3>
+                    <h3 class="faq-title text-white">What kinds of custom AI agents and LLM integrations do you build?</h3>
                     <button class="faq-toggle-btn" aria-label="Toggle answer">
                       <i data-lucide="plus" class="faq-icon-plus"></i>
                     </button>
                   </div>
                   <div class="faq-content">
-                    <p class="faq-desc text-muted-dark">We build autonomous AI agents tailored to automate complex operations, retrieval-augmented generation (RAG) systems that connect LLMs to your private data secure databases, and custom model fine-tuning utilizing state-of-the-art frameworks like LangChain, OpenAI, and Claude.</p>
+                    <p class="faq-desc text-muted-light">We build autonomous AI agents tailored to automate complex operations, retrieval-augmented generation (RAG) systems that connect LLMs to your private data secure databases, and custom model fine-tuning utilizing state-of-the-art frameworks like LangChain, OpenAI, and Claude.</p>
                   </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
                 <div class="faq-item">
                   <div class="faq-header">
-                    <h3 class="faq-title text-dark">How do you ensure data security and privacy when developing AI solutions?</h3>
+                    <h3 class="faq-title text-white">How do you ensure data security and privacy when developing AI solutions?</h3>
                     <button class="faq-toggle-btn" aria-label="Toggle answer">
                       <i data-lucide="plus" class="faq-icon-plus"></i>
                     </button>
                   </div>
                   <div class="faq-content">
-                    <p class="faq-desc text-muted-dark">Security is our core priority. We construct sandboxed vector databases, leverage enterprise-grade APIs with zero-data retention policies, and implement local, self-hosted LLMs when necessary to guarantee your proprietary business intelligence remains completely confidential and private.</p>
+                    <p class="faq-desc text-muted-light">Security is our core priority. We construct sandboxed vector databases, leverage enterprise-grade APIs with zero-data retention policies, and implement local, self-hosted LLMs when necessary to guarantee your proprietary business intelligence remains completely confidential and private.</p>
                   </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
                 <div class="faq-item">
                   <div class="faq-header">
-                    <h3 class="faq-title text-dark">What tech stacks do you leverage for high-performance apps and websites?</h3>
+                    <h3 class="faq-title text-white">What tech stacks do you leverage for high-performance apps and websites?</h3>
                     <button class="faq-toggle-btn" aria-label="Toggle answer">
                       <i data-lucide="plus" class="faq-icon-plus"></i>
                     </button>
                   </div>
                   <div class="faq-content">
-                    <p class="faq-desc text-muted-dark">We build lightning-fast web experiences using modern architectures like Next.js, React, Node.js, and TailwindCSS. For mobile apps, we deploy cross-platform architectures using Flutter or React Native, alongside native Kotlin and Swift integrations to achieve maximum performance and native UI response.</p>
+                    <p class="faq-desc text-muted-light">We build lightning-fast web experiences using modern architectures like Next.js, React, Node.js, and TailwindCSS. For mobile apps, we deploy cross-platform architectures using Flutter or React Native, alongside native Kotlin and Swift integrations to achieve maximum performance and native UI response.</p>
                   </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
                 <div class="faq-item">
                   <div class="faq-header">
-                    <h3 class="faq-title text-dark">Can you integrate custom AI workflows into our existing legacy systems?</h3>
+                    <h3 class="faq-title text-white">Can you integrate custom AI workflows into our existing legacy systems?</h3>
                     <button class="faq-toggle-btn" aria-label="Toggle answer">
                       <i data-lucide="plus" class="faq-icon-plus"></i>
                     </button>
                   </div>
                   <div class="faq-content">
-                    <p class="faq-desc text-muted-dark">Absolutely. We engineer custom API layers, webhooks, and middleware that act as a bridge between your legacy databases or enterprise systems and modern AI pipelines, allowing you to scale intelligent automation without rewriting your core infrastructure.</p>
+                    <p class="faq-desc text-muted-light">Absolutely. We engineer custom API layers, webhooks, and middleware that act as a bridge between your legacy databases or enterprise systems and modern AI pipelines, allowing you to scale intelligent automation without rewriting your core infrastructure.</p>
                   </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
                 <div class="faq-item">
                   <div class="faq-header">
-                    <h3 class="faq-title text-dark">Who owns the final code, custom AI models, and intellectual property?</h3>
+                    <h3 class="faq-title text-white">Who owns the final code, custom AI models, and intellectual property?</h3>
                     <button class="faq-toggle-btn" aria-label="Toggle answer">
                       <i data-lucide="plus" class="faq-icon-plus"></i>
                     </button>
                   </div>
                   <div class="faq-content">
-                    <p class="faq-desc text-muted-dark">You do. Once project milestones are complete and finalized, 100% of the custom codebase, database schemas, custom model parameters, and intellectual property are fully transferred to your business with zero recurring licensing fees.</p>
+                    <p class="faq-desc text-muted-light">You do. Once project milestones are complete and finalized, 100% of the custom codebase, database schemas, custom model parameters, and intellectual property are fully transferred to your business with zero recurring licensing fees.</p>
                   </div>
                 </div>
               </div>
@@ -732,7 +1103,7 @@
       </section>
 
       <!-- SECTION 10: CONTACT & FOOTER (Dark Theme Boxed Card) -->
-      <section id="contact" class="section contact-section dark-bg scroll-trigger" data-theme="dark">
+      <section id="contact" class="section contact-section dark-bg scroll-trigger reveal-on-scroll" data-theme="dark">
         <div class="section-container">
           <div class="contact-rounded-container">
             <div class="contact-grain-overlay"></div>
@@ -741,7 +1112,7 @@
               <!-- Left Column: White Contact Form Card -->
               <div class="contact-form-column">
                 <div class="contact-form-card">
-                  <h3 class="contact-form-title text-dark">
+                  <h3 class="contact-form-title text-white">
                     <span class="text-accent font-bold">Have a project</span> in mind?
                   </h3>
                   
