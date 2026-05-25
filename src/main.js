@@ -567,9 +567,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const avgDelta = frameTimes.reduce((a, b) => a + b) / 50;
         const fps = 1000 / avgDelta;
         if (fps < 48 && scaleFactor > 0.65) {
-          scaleFactor -= 0.05;
+          scaleFactor = Math.max(0.65, scaleFactor - 0.05);
         } else if (fps > 56 && scaleFactor < 1.0) {
-          scaleFactor += 0.02;
+          scaleFactor = Math.min(1.0, scaleFactor + 0.02);
         }
       }
       
@@ -590,8 +590,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const maxZ = 700;
       const rangeZ = maxZ - minZ;
       
-      for (let i = 0; i < stars.length * scaleFactor; i++) {
+      const activeStars = Math.floor(stars.length * scaleFactor);
+      for (let i = 0; i < activeStars; i++) {
         const s = stars[i];
+        if (!s) continue;
         
         let starZ = s.z - zScrollShift * 0.15;
         starZ = ((starZ - minZ) % rangeZ + rangeZ) % rangeZ + minZ;
@@ -726,8 +728,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const minPZ = -200;
       const maxPZ = 600;
       
-      for (let i = 0; i < particles.length * scaleFactor; i++) {
+      const activeParticles = Math.floor(particles.length * scaleFactor);
+      for (let i = 0; i < activeParticles; i++) {
         const p = particles[i];
+        if (!p) continue;
         
         p.x += p.vx;
         p.y += p.vy;
